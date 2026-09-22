@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apple | Tecnologia que inspira</title>
+
+    <style>
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
+
+            background: #f5f5f7;
+            color: #1d1d1f;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 56px;
+
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.82);
+
+            backdrop-filter: blur(20px);
+
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            height: 100%;
+
+            margin: auto;
+
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 27px;
+            color: #000;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            color: #333;
+            font-size: 13px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #0071e3;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            padding-top: 56px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 50% 30%,
+                    #ffffff 0%,
+                    #f5f5f7 45%,
+                    #dedee3 100%);
+        }
+
+        .hero-content {
+            max-width: 1000px;
+
+            position: relative;
+            z-index: 2;
+
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(50px, 8vw, 90px);
+
+            letter-spacing: -5px;
+
+            font-weight: 700;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: clamp(25px, 4vw, 40px);
+
+            font-weight: 400;
+
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #6e6e73;
+
+            font-size: 19px;
+
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+        }
+
+        .button {
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        .button-blue {
+            background: #0071e3;
+            color: white;
+        }
+
+        .button-blue:hover {
+            background: #0077ed;
+
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            color: #0071e3;
+
+            border: 1px solid #0071e3;
+        }
+
+        .button-outline:hover {
+            background: #0071e3;
+            color: white;
+        }
+
+
+        /* =========================
+           HERO IMAGE
+        ========================= */
+
+        .hero-product {
+            margin: 55px auto 0;
+
+            width: min(850px, 90%);
+
+            height: 360px;
+
+            border-radius: 35px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.18);
+
+            transition: 0.5s;
+        }
+
+        .hero-product:hover {
+            transform: scale(1.02);
+        }
+
+        .hero-product img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: center;
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        section {
+            padding: 110px 20px;
+        }
+
+        .section-title {
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+
+            margin-bottom: 65px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(38px, 5vw, 58px);
+
+            letter-spacing: -3px;
+
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #6e6e73;
+
+            font-size: 19px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           IPHONE FEATURE
+        ========================= */
+
+        .iphone-section {
+            background: #000;
+
+            color: white;
+
+            text-align: center;
+
+            overflow: hidden;
+        }
+
+        .iphone-section .section-title p {
+            color: #a1a1a6;
+        }
+
+        .iphone-image {
+            max-width: 1000px;
+
+            height: 600px;
+
+            margin: auto;
+
+            border-radius: 35px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 40px 100px rgba(255, 255, 255, 0.08);
+        }
+
+        .iphone-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        /* =========================
+           PRODUTOS
+        ========================= */
+
+        .products {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .product-card {
+            background: #fff;
+
+            border-radius: 28px;
+
+            overflow: hidden;
+
+            min-height: 520px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            transition: 0.4s;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-image {
+            height: 320px;
+
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.5s;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.07);
+        }
+
+        .product-info {
+            padding: 30px;
+
+            text-align: center;
+        }
+
+        .product-info span {
+            color: #0071e3;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+        .product-info h3 {
+            font-size: 30px;
+
+            margin: 10px 0;
+        }
+
+        .product-info p {
+            color: #6e6e73;
+
+            line-height: 1.5;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           BANNER GRANDE
+        ========================= */
+
+        .large-banner {
+            min-height: 650px;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+            overflow: hidden;
+        }
+
+        .large-banner img {
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            z-index: 0;
+        }
+
+        .large-banner::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.15),
+                    rgba(0, 0, 0, 0.72));
+
+            z-index: 1;
+        }
+
+        .banner-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 750px;
+
+            padding: 30px;
+        }
+
+        .banner-content h2 {
+            font-size: clamp(45px, 7vw, 75px);
+
+            letter-spacing: -4px;
+
+            margin-bottom: 20px;
+        }
+
+        .banner-content p {
+            font-size: 20px;
+
+            line-height: 1.6;
+
+            color: #eee;
+        }
+
+
+        /* =========================
+           INOVAÇÃO
+        ========================= */
+
+        .innovation {
+            background: #fff;
+
+            text-align: center;
+        }
+
+        .innovation-content {
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+        .innovation-image {
+            width: 100%;
+
+            height: 450px;
+
+            margin-top: 60px;
+
+            border-radius: 35px;
+
+            overflow: hidden;
+        }
+
+        .innovation-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        /* =========================
+           PRIVACIDADE
+        ========================= */
+
+        .privacy {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .privacy h2 {
+            font-size: 50px;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 20px;
+        }
+
+        .privacy p {
+            color: #6e6e73;
+
+            font-size: 19px;
+
+            line-height: 1.7;
+
+            margin-bottom: 25px;
+        }
+
+        .privacy-image {
+            height: 450px;
+
+            border-radius: 35px;
+
+            overflow: hidden;
+        }
+
+        .privacy-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #f5f5f7;
+
+            border-top: 1px solid #ddd;
+
+            padding: 60px 20px;
+
+            color: #6e6e73;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+        .footer-logo {
+            font-size: 25px;
+
+            color: #000;
+
+            margin-bottom: 35px;
+        }
+
+        .footer-columns {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 40px;
+
+            margin-bottom: 50px;
+        }
+
+        .footer-column h4 {
+            color: #1d1d1f;
+
+            margin-bottom: 18px;
+        }
+
+        .footer-column a {
+            display: block;
+
+            color: #6e6e73;
+
+            font-size: 14px;
+
+            margin-bottom: 12px;
+        }
+
+        .footer-column a:hover {
+            color: #0071e3;
+
+            text-decoration: underline;
+        }
+
+        .copyright {
+            border-top: 1px solid #ddd;
+
+            padding-top: 25px;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            nav {
+                display: none;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+                max-width: 550px;
+            }
+
+            .privacy {
+                grid-template-columns: 1fr;
+            }
+
+            .iphone-image {
+                height: 450px;
+            }
+
+            .footer-columns {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .hero {
+                padding-top: 80px;
+            }
+
+            .hero-product {
+                height: 250px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .iphone-image {
+                height: 350px;
+            }
+
+            .innovation-image {
+                height: 300px;
+            }
+
+            .privacy-image {
+                height: 300px;
+            }
+
+            .footer-columns {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MENU
+    ========================= -->
+
+    <header>
+
+        <div class="navbar">
+
+            <a href="#inicio" class="logo">
+                
+            </a>
+
+            <nav>
+
+                <a href="#inicio">Início</a>
+
+                <a href="#iphone">iPhone</a>
+
+                <a href="#produtos">Produtos</a>
+
+                <a href="#inovacao">Inovação</a>
+
+                <a href="#privacidade">Privacidade</a>
+
+            </nav>
+
+            <div class="icons">
+                ♧
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <h1>Think different.</h1>
+
+            <h2>Tecnologia em sua melhor forma.</h2>
+
+            <p>
+                Design sofisticado, desempenho poderoso e
+                inovação criada para transformar a maneira
+                como você vive, trabalha e se conecta.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#produtos" class="button button-blue">
+
+                    Conheça os produtos
+
+                </a>
+
+                <a href="#inovacao" class="button button-outline">
+
+                    Descubra mais
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-product">
+
+                <img src="https://images.unsplash.com/photo-1592286927505-2fd0c4c4f7f4?auto=format&fit=crop&w=1600&q=90"
+                    alt="Smartphone premium">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         IPHONE
+    ========================= -->
+
+    <section class="iphone-section" id="iphone">
+
+        <div class="section-title">
+
+            <h2>iPhone</h2>
+
+            <p>
+                Poderoso por dentro. Impressionante por fora.
+            </p>
+
+        </div>
+
+
+        <div class="iphone-image">
+
+            <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=1600&q=90"
+                alt="iPhone">
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUTOS
+    ========================= -->
+
+    <section id="produtos">
+
+        <div class="section-title">
+
+            <h2>Conheça a linha.</h2>
+
+            <p>
+                Produtos desenvolvidos para oferecer
+                uma experiência extraordinária.
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <!-- IPHONE -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img src="https://images.unsplash.com/photo-1592286927505-2fd0c4c4f7f4?auto=format&fit=crop&w=1000&q=90"
+                        alt="iPhone">
+
+                </div>
+
+                <div class="product-info">
+
+                    <span>IPHONE</span>
+
+                    <h3>iPhone</h3>
+
+                    <p>
+                        Tecnologia avançada,
+                        design sofisticado e
+                        desempenho extraordinário.
+                    </p>
+
+                    <a href="#" class="button button-blue">
+
+                        Saiba mais
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- MAC -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?auto=format&fit=crop&w=1000&q=90"
+                        alt="MacBook">
+
+                </div>
+
+                <div class="product-info">
+
+                    <span>MAC</span>
+
+                    <h3>MacBook</h3>
+
+                    <p>
+                        Potência profissional
+                        em um design extremamente
+                        elegante.
+                    </p>
+
+                    <a href="#" class="button button-blue">
+
+                        Saiba mais
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- WATCH -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img src="https://images.unsplash.com/photo-1544117519-31a4b719223d?auto=format&fit=crop&w=1000&q=90"
+                        alt="Apple Watch">
+
+                </div>
+
+                <div class="product-info">
+
+                    <span>APPLE WATCH</span>
+
+                    <h3>Apple Watch</h3>
+
+                    <p>
+                        Tecnologia que acompanha
+                        cada momento do seu dia.
+                    </p>
+
+                    <a href="#" class="button button-blue">
+
+                        Saiba mais
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BANNER
+    ========================= -->
+
+    <section class="large-banner">
+
+        <img src="https://images.unsplash.com/photo-1551816230-ef5deaed4a26?auto=format&fit=crop&w=1800&q=90"
+            alt="Tecnologia">
+
+        <div class="banner-content">
+
+            <h2>O futuro começa agora.</h2>
+
+            <p>
+                Uma combinação entre tecnologia,
+                criatividade e design para criar
+                experiências que parecem impossíveis.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INOVAÇÃO
+    ========================= -->
+
+    <section class="innovation" id="inovacao">
+
+        <div class="innovation-content">
+
+            <div class="section-title">
+
+                <h2>
+                    Inovação em cada detalhe.
+                </h2>
+
+                <p>
+                    Hardware e software trabalhando juntos
+                    para oferecer uma experiência simples,
+                    intuitiva e poderosa.
+                </p>
+
+            </div>
+
+
+            <div class="innovation-image">
+
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1800&q=90"
+                    alt="Tecnologia e inovação">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRIVACIDADE
+    ========================= -->
+
+    <section id="privacidade">
+
+        <div class="privacy">
+
+
+            <div>
+
+                <h2>
+                    Privacidade.
+                    Isso é importante.
+                </h2>
+
+                <p>
+                    A tecnologia deve trabalhar para você.
+                    Por isso, privacidade e segurança fazem
+                    parte da experiência desde o início.
+                </p>
+
+                <a href="#" class="button button-blue">
+
+                    Saiba mais
+
+                </a>
+
+            </div>
+
+
+            <div class="privacy-image">
+
+                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=90"
+                    alt="Segurança digital">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                 Apple
+            </div>
+
+
+            <div class="footer-columns">
+
+
+                <div class="footer-column">
+
+                    <h4>Produtos</h4>
+
+                    <a href="#">iPhone</a>
+
+                    <a href="#">Mac</a>
+
+                    <a href="#">iPad</a>
+
+                    <a href="#">Apple Watch</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Serviços</h4>
+
+                    <a href="#">iCloud</a>
+
+                    <a href="#">Apple Music</a>
+
+                    <a href="#">Apple TV+</a>
+
+                    <a href="#">Apple Arcade</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Suporte</h4>
+
+                    <a href="#">Ajuda</a>
+
+                    <a href="#">Contato</a>
+
+                    <a href="#">Garantia</a>
+
+                    <a href="#">Acessibilidade</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Sobre</h4>
+
+                    <a href="#">A Apple</a>
+
+                    <a href="#">Privacidade</a>
+
+                    <a href="#">Meio ambiente</a>
+
+                    <a href="#">Carreiras</a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="copyright">
+
+                © 2026 — Projeto acadêmico desenvolvido
+                para fins educacionais.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
